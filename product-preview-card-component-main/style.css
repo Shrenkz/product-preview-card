@@ -1,0 +1,136 @@
+:root{
+  /*Primary*/
+
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+/*Neutral*/
+
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--Cream);
+}
+
+h2{
+  font-family: 'Fraunces', sans-serif;
+}
+
+p{
+  font-size: 14px;
+}
+
+.card{
+  height: 100%;
+  width: 500px;
+}
+
+.card_container{
+  display: flex;
+}
+
+.card_image{
+  background-image: url('./images/image-product-desktop.jpg');
+  background-size: cover;
+  width: 50%;
+  background-position: center center;
+  border-radius: .5rem 0 0 .5rem;
+}
+
+.card_info{
+  width: 50%;
+  background-color: var(--White);
+  padding: 2rem;
+  border-radius: 0 .5rem .5rem 0;
+}
+
+.sub-title{
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 14px;
+  color: var(--Dark-grayish-blue);
+}
+
+.title{
+  margin: 1rem 0;
+}
+
+.info{
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.prices{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prices h2{
+  color: var(--Dark-cyan);
+  font-size: 1.7rem;
+}
+
+.prices p{
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+}
+
+button{
+  display: flex;
+  padding: .7rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-weight: 500;
+  justify-content: center;
+  gap: .5rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--Very-dark-blue);
+}
+
+@media screen and (max-width: 550px){
+  .card{
+    width: 350px;
+  }
+
+  .card_container{
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card_image{
+    background-image: url('./images/image-product-mobile.jpg');
+    background-size: cover;
+    border-radius: .5rem .5rem 0 0;
+    height: 250px;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .card_info{
+    width: 100%;
+  }
+}
